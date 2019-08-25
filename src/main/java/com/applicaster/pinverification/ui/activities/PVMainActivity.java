@@ -1,7 +1,8 @@
 package com.applicaster.pinverification.ui.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.TextView;
 
 import com.applicaster.pinverification.R;
 import com.applicaster.pinverification.ui.adapters.PVPinCodeAdapter;
-import com.applicaster.util.OSUtil;
+
 
 public class PVMainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -42,8 +43,11 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
 
     private void recyclerViewInit() {
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
+                layoutManager.getOrientation());
         this.pin_code_main_recyclerView.setLayoutManager(layoutManager);
-        adapter = new PVPinCodeAdapter(numberOnPinItems, this);
+        this.pin_code_main_recyclerView.addItemDecoration(dividerItemDecoration);
+        adapter = new PVPinCodeAdapter(numberOnPinItems, this, pin_code_main_recyclerView);
         this.pin_code_main_recyclerView.setAdapter(adapter);
 
     }
@@ -59,11 +63,11 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == OSUtil.getResourceId("pin_code_main_resent_code_TV")) {
-            //TODO... resent code
-
-        } else if (v.getId() == OSUtil.getResourceId("pin_code_main_continue_BTN")) {
-            //TODO continue..
-        }
+//        if (v.getId() == OSUtil.getResourceId("pin_code_main_resent_code_TV")) {
+//            //TODO... resent code
+//
+//        } else if (v.getId() == OSUtil.getResourceId("pin_code_main_continue_BTN")) {
+//            //TODO continue..
+//        }
     }
 }
