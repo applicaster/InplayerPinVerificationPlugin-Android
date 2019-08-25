@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="resend_access_code"><u>Resend access code</u></string>
+</resources>

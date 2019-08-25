@@ -1,0 +1,111 @@
+{
+  "api": {
+    "require_startup_execution": true,
+    "class_name": "com.applicaster.questionaireonboarding.QBLoginAdapter"
+  },
+  "dependency_repository_url": [
+    {
+      "url": "https://dl.bintray.com/applicaster-ltd/maven_plugins"
+    }
+  ],
+  "platform": "android",
+  "author_name": "Igor Fridman",
+  "author_email": "igorfridman710@gmail.com",
+  "manifest_version": "0.0.1",
+  "dependency_version": "0.1.+",
+  "dependency_name": "com.applicaster:QuestionaireOnBoardingPlugin-Android",
+  "name": "Questionaire OnBoarding Plugin",
+  "description": "Questionaire OnBoarding Plugin for Android",
+  "type": "general",
+  "identifier": "questionaire_onboarding_login",
+  "ui_builder_support": false,
+  "whitelisted_account_ids": [
+    "5c7e272b51a78800083d1187"
+  ],
+  "min_zapp_sdk": "8.1.0",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [
+    {
+  "type": "uploader",
+  "key": "android_assets_bundle",
+  "tooltip_text": "Add images to app as a zip file. The images must be lowerCase"
+},
+{
+  "type": "text",
+  "key": "q1_Title",
+  "tooltip_text": "Question"
+},
+{
+  "type": "text",
+  "key": "q1_answer1",
+  "tooltip_text": "Answer 1"
+},
+{
+  "type": "text",
+  "key": "q1_answer2",
+  "tooltip_text": "Answer 2"
+},
+{
+  "type": "text",
+  "key": "q1_answer3",
+  "tooltip_text": "Answer 3"
+},
+{
+  "type": "text",
+  "key": "q1_answer4",
+  "tooltip_text": "Answer 4"
+},
+{
+  "type": "text",
+  "key": "q1_answer5",
+  "tooltip_text": "Answer 5"
+},
+{
+  "type": "text",
+  "key": "q1_key1",
+  "tooltip_text": "key 1"
+},
+{
+  "type": "text",
+  "key": "q1_key2",
+  "tooltip_text": "key 2"
+},
+{
+  "type": "text",
+  "key": "q1_key3",
+  "tooltip_text": "key 3"
+},
+{
+  "type": "text",
+  "key": "q1_key4",
+  "tooltip_text": "key 4"
+},
+{
+  "type": "text",
+  "key": "q1_key5",
+  "tooltip_text": "key 5"
+}
+  ],
+  "styles": {
+  "fields": [
+    {
+      "key": "background_color",
+      "type": "color_picker",
+      "label": "Background Color"
+    },
+    {
+      "key": "question_text",
+      "type": "color_picker",
+      "label": "Question Text Color"
+    },
+    {
+      "key": "question_text_selected",
+      "type": "color_picker",
+      "label": "Question Selected Text Color"
+    }
+  ]
+}
+
+}

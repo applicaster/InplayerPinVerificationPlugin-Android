@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="title_text_color">#ffffff</color>
+    <color name="pin_code_continue_button_orange_color">#F29808</color>
+
+</resources>

@@ -1,0 +1,49 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+	package
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:1-13:12
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:5:5-11:19
+activity#com.applicaster.pinverification.ui.activities.PVMainActivity
+ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:6:9-10:75
+	android:screenOrientation
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:9:13-49
+	android:configChanges
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:8:13-59
+	android:theme
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:10:13-63
+	android:name
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml:7:13-57
+uses-sdk
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+		ADDED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
+		INJECTED from /Android/applicaster/Cleeng/Cleeng_Analitycs/InplayerPinVerificationPlugin-Android/src/main/AndroidManifest.xml
