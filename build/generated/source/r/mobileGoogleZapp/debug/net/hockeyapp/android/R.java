@@ -14,10 +14,10 @@ public final class R {
         public static int button_background = 0x7f06002c;
         public static int button_background_pressed = 0x7f06002d;
         public static int button_background_selected = 0x7f06002e;
-        public static int text_black = 0x7f060154;
-        public static int text_light = 0x7f060155;
-        public static int text_normal = 0x7f060156;
-        public static int text_white = 0x7f060157;
+        public static int text_black = 0x7f060159;
+        public static int text_light = 0x7f06015a;
+        public static int text_normal = 0x7f06015b;
+        public static int text_white = 0x7f06015c;
     }
     public static final class drawable {
         public static int btn_background = 0x7f090066;
@@ -43,14 +43,14 @@ public final class R {
         public static int label_version = 0x7f0c01c5;
         public static int list_attachments = 0x7f0c01fa;
         public static int list_feedback_messages = 0x7f0c01fb;
-        public static int text_headline = 0x7f0c0353;
-        public static int view_header = 0x7f0c03a4;
-        public static int web_update_details = 0x7f0c03b3;
-        public static int wrapper_attachments = 0x7f0c03bb;
-        public static int wrapper_feedback = 0x7f0c03bc;
-        public static int wrapper_feedback_scroll = 0x7f0c03bd;
-        public static int wrapper_messages = 0x7f0c03be;
-        public static int wrapper_messages_buttons = 0x7f0c03bf;
+        public static int text_headline = 0x7f0c0354;
+        public static int view_header = 0x7f0c03a5;
+        public static int web_update_details = 0x7f0c03b4;
+        public static int wrapper_attachments = 0x7f0c03bc;
+        public static int wrapper_feedback = 0x7f0c03bd;
+        public static int wrapper_feedback_scroll = 0x7f0c03be;
+        public static int wrapper_messages = 0x7f0c03bf;
+        public static int wrapper_messages_buttons = 0x7f0c03c0;
     }
     public static final class layout {
         public static int activity_expiry_info = 0x7f0f001f;

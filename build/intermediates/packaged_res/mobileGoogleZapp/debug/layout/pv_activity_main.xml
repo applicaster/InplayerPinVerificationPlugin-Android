@@ -4,46 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#ffffff"
     tools:context=".ui.activities.PVMainActivity">
 
     <TextView
         android:id="@+id/pin_code_main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Please enter the accsess code you received by mail"
+        android:text="ENTER PIN*"
+        android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintEnd_toEndOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.2" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/pin_code_main_recyclerView"
+    <RelativeLayout
+
+        android:id="@+id/recycler_wraper"
         android:layout_width="0dp"
-        android:layout_height="178dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/pin_code_main_title" />
+        app:layout_constraintTop_toBottomOf="@+id/pin_code_main_title"
+        app:layout_constraintBottom_toTopOf="@+id/pin_code_main_continue_BTN">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pin_code_main_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </RelativeLayout>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <TextView
         android:id="@+id/pin_code_main_continue_BTN"
@@ -51,8 +67,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/custom_login_fild"
         android:gravity="center"
-        android:text="CONTINUE"
-        android:textSize="20dp"
+        android:text="PROCEED"
+        android:textColor="@color/colorBlue"
+        android:paddingVertical="7dp"
+        android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="@+id/guideline4"
@@ -80,13 +98,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/resend_access_code"
+        android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/pin_code_main_continue_BTN"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/pin_code_main_recyclerView"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintTop_toBottomOf="@+id/recycler_wraper" />
 </android.support.constraint.ConstraintLayout>

@@ -23,17 +23,17 @@ public final class R {
         public static int scopeUris = 0x7f0402e3;
     }
     public static final class color {
-        public static int com_mixpanel_android_selected = 0x7f06005c;
-        public static int common_google_signin_btn_text_dark = 0x7f06006e;
-        public static int common_google_signin_btn_text_dark_default = 0x7f06006f;
-        public static int common_google_signin_btn_text_dark_disabled = 0x7f060070;
-        public static int common_google_signin_btn_text_dark_focused = 0x7f060071;
-        public static int common_google_signin_btn_text_dark_pressed = 0x7f060072;
-        public static int common_google_signin_btn_text_light = 0x7f060073;
-        public static int common_google_signin_btn_text_light_default = 0x7f060074;
-        public static int common_google_signin_btn_text_light_disabled = 0x7f060075;
-        public static int common_google_signin_btn_text_light_focused = 0x7f060076;
-        public static int common_google_signin_btn_text_light_pressed = 0x7f060077;
+        public static int com_mixpanel_android_selected = 0x7f060061;
+        public static int common_google_signin_btn_text_dark = 0x7f060073;
+        public static int common_google_signin_btn_text_dark_default = 0x7f060074;
+        public static int common_google_signin_btn_text_dark_disabled = 0x7f060075;
+        public static int common_google_signin_btn_text_dark_focused = 0x7f060076;
+        public static int common_google_signin_btn_text_dark_pressed = 0x7f060077;
+        public static int common_google_signin_btn_text_light = 0x7f060078;
+        public static int common_google_signin_btn_text_light_default = 0x7f060079;
+        public static int common_google_signin_btn_text_light_disabled = 0x7f06007a;
+        public static int common_google_signin_btn_text_light_focused = 0x7f06007b;
+        public static int common_google_signin_btn_text_light_pressed = 0x7f06007c;
     }
     public static final class drawable {
         public static int com_mixpanel_android_arrowleft = 0x7f0900ec;
@@ -116,8 +116,8 @@ public final class R {
         public static int icon_only = 0x7f0c01a4;
         public static int light = 0x7f0c01f0;
         public static int none = 0x7f0c0258;
-        public static int standard = 0x7f0c0323;
-        public static int wide = 0x7f0c03b5;
+        public static int standard = 0x7f0c0324;
+        public static int wide = 0x7f0c03b6;
     }
     public static final class integer {
         public static int google_play_services_version = 0x7f0d000c;
@@ -151,8 +151,8 @@ public final class R {
         public static int common_signin_button_text_long = 0x7f1500c9;
     }
     public static final class style {
-        public static int com_mixpanel_android_TakeoverInAppActivityAnimation = 0x7f1602ca;
-        public static int com_mixpanel_android_TakeoverInAppActivityTheme = 0x7f1602cb;
+        public static int com_mixpanel_android_TakeoverInAppActivityAnimation = 0x7f1602c9;
+        public static int com_mixpanel_android_TakeoverInAppActivityTheme = 0x7f1602ca;
     }
     public static final class styleable {
         public static int[] LoadingImageView = { 0x7f0400c0, 0x7f0401b8, 0x7f0401b9 };

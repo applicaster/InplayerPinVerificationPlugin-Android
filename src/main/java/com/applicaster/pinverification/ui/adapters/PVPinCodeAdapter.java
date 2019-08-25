@@ -7,24 +7,29 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.applicaster.pinverification.R;
+import com.applicaster.util.OSUtil;
 
 
 public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.ViewHolder> {
 
-    private int numberOfCells = 0;
+    private int numberOfCells;
     private Context context;
     private RecyclerView recyclerView;
 
     public PVPinCodeAdapter(int numberOfCells, Context context, RecyclerView view) {
 
-        this.numberOfCells = numberOfCells;
+        if(numberOfCells == 0){
+            this.numberOfCells = 4; //Default value
+        }else {
+            this.numberOfCells = numberOfCells;
+        }
+
         this.context = context;
         this.recyclerView = view;
 
@@ -37,10 +42,9 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
 
         String layoutName = "single_pincode_item";
 
-        View view = LayoutInflater.from(context).inflate(R.layout.single_pincode_item, viewGroup, false);
 
-        //  return new ViewHolder(OSUtil.getLayoutInflater(context).inflate(OSUtil.getLayoutResourceIdentifier(layoutName), viewGroup, false));
-        return new ViewHolder(view);
+        return new ViewHolder(OSUtil.getLayoutInflater(context).inflate(OSUtil.getLayoutResourceIdentifier(layoutName), viewGroup, false));
+
     }
 
     @Override

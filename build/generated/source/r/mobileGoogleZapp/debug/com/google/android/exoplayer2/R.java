@@ -38,24 +38,24 @@ public final class R {
         public static int use_controller = 0x7f040390;
     }
     public static final class color {
-        public static int exo_edit_mode_background_color = 0x7f060092;
+        public static int exo_edit_mode_background_color = 0x7f060097;
     }
     public static final class dimen {
         public static int exo_media_button_height = 0x7f0800d3;
         public static int exo_media_button_width = 0x7f0800d4;
     }
     public static final class drawable {
-        public static int exo_controls_fastforward = 0x7f09015c;
-        public static int exo_controls_next = 0x7f09015d;
-        public static int exo_controls_pause = 0x7f09015e;
-        public static int exo_controls_play = 0x7f09015f;
-        public static int exo_controls_previous = 0x7f090160;
-        public static int exo_controls_repeat_all = 0x7f090161;
-        public static int exo_controls_repeat_off = 0x7f090162;
-        public static int exo_controls_repeat_one = 0x7f090163;
-        public static int exo_controls_rewind = 0x7f090164;
-        public static int exo_controls_shuffle = 0x7f090165;
-        public static int exo_edit_mode_logo = 0x7f090166;
+        public static int exo_controls_fastforward = 0x7f09015d;
+        public static int exo_controls_next = 0x7f09015e;
+        public static int exo_controls_pause = 0x7f09015f;
+        public static int exo_controls_play = 0x7f090160;
+        public static int exo_controls_previous = 0x7f090161;
+        public static int exo_controls_repeat_all = 0x7f090162;
+        public static int exo_controls_repeat_off = 0x7f090163;
+        public static int exo_controls_repeat_one = 0x7f090164;
+        public static int exo_controls_rewind = 0x7f090165;
+        public static int exo_controls_shuffle = 0x7f090166;
+        public static int exo_edit_mode_logo = 0x7f090167;
     }
     public static final class id {
         public static int exo_artwork = 0x7f0c0114;
@@ -81,8 +81,8 @@ public final class R {
         public static int fixed_height = 0x7f0c016d;
         public static int fixed_width = 0x7f0c016e;
         public static int none = 0x7f0c0258;
-        public static int surface_view = 0x7f0c0340;
-        public static int texture_view = 0x7f0c0359;
+        public static int surface_view = 0x7f0c0341;
+        public static int texture_view = 0x7f0c035a;
     }
     public static final class layout {
         public static int exo_playback_control_view = 0x7f0f0058;
