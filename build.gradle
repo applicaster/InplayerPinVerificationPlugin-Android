@@ -44,8 +44,9 @@ repositories {
     maven { // Applicaster
         credentials {
 
-            username 'acorde'
-            password '9fda11adcdcd2536d727e6c2cff9efd01a5c4da2'
+            username System.getenv("MAVEN_USERNAME")
+            password System.getenv("MAVEN_PASSWORD")
+
         }
         url 'https://dl.bintray.com/applicaster-ltd/maven'
     }
