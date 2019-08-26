@@ -21,12 +21,12 @@
 #-renamesourcefileattribute SourceFile
 
 #-----------Adapter------------#
--keep public class com.applicaster.questionaireonboarding.QBLoginAdapter {
+-keep public class com.applicaster.pinverification.PinCodePluginAdapter {
    public <fields>;
    public <methods>;
 }
 
--keep public class com.applicaster.questionaireonboarding.** {*;}
+-keep public class com.applicaster.pinverification.** {*;}
 
 
 -keepattributes Signature, InnerClasses, EnclosingMethod
