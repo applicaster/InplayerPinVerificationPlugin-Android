@@ -8,14 +8,14 @@ package com.google.android.gms.cast;
 
 public final class R {
     public static final class drawable {
-        public static int cast_ic_notification_0 = 0x7f090098;
-        public static int cast_ic_notification_1 = 0x7f090099;
-        public static int cast_ic_notification_2 = 0x7f09009a;
-        public static int cast_ic_notification_connecting = 0x7f09009b;
-        public static int cast_ic_notification_on = 0x7f0900a0;
+        public static int cast_ic_notification_0 = 0x7f0900a0;
+        public static int cast_ic_notification_1 = 0x7f0900a1;
+        public static int cast_ic_notification_2 = 0x7f0900a2;
+        public static int cast_ic_notification_connecting = 0x7f0900a3;
+        public static int cast_ic_notification_on = 0x7f0900a8;
     }
     public static final class id {
-        public static int cast_notification_id = 0x7f0c008a;
+        public static int cast_notification_id = 0x7f0c00aa;
     }
     public static final class string {
         public static int cast_notification_connected_message = 0x7f150045;
