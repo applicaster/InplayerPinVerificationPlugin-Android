@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 
 
-import com.applicaster.pinverification.ui.fragments.PVPMainFragment;
+
 import com.applicaster.plugin_manager.Plugin;
 import com.applicaster.plugin_manager.screen.PluginScreen;
 import com.applicaster.pluginpresenter.PluginPresenter;
@@ -28,7 +28,7 @@ public class PinCodePluginAdapter implements PluginScreen, PluginPresenter {
 
     @Override
     public Fragment generateFragment(HashMap<String, Object> screenMap, Serializable dataSource) {
-        return PVPMainFragment.newInstance(screenMap);
+        return null;
     }
 
 
