@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
 
 
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
 
@@ -35,17 +35,17 @@ repositories {
     jcenter()
     mavenCentral()
     maven { url 'https://maven.google.com' }
-    maven { url 'https://google.bintray.com/exoplayer/' }
-    maven { url 'https://google.bintray.com/interactivemedia/' }
+    maven { url 'https://google.bintray.com/exoplayer/'}
+    maven { url 'https://google.bintray.com/interactivemedia/'}
     maven { url 'https://jitpack.io' }
     maven {
         url 'http://dl.bintray.com/npaw/youbora'
     }
     maven { // Applicaster
         credentials {
-            username System.getenv("MAVEN_USERNAME")
-            password System.getenv("MAVEN_PASSWORD")
 
+            username 'acorde'
+            password '9fda11adcdcd2536d727e6c2cff9efd01a5c4da2'
         }
         url 'https://dl.bintray.com/applicaster-ltd/maven'
     }
