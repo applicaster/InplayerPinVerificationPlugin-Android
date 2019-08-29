@@ -21,12 +21,13 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
     private int numberOfCells;
     private Context context;
     private RecyclerView recyclerView;
+    private static String pinCode = "";
 
     public PVPinCodeAdapter(int numberOfCells, Context context, RecyclerView view) {
 
-        if(numberOfCells == 0){
+        if (numberOfCells == 0) {
             this.numberOfCells = 4; //Default value
-        }else {
+        } else {
             this.numberOfCells = numberOfCells;
         }
 
@@ -86,6 +87,7 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
             Log.d("IgorTest", "afterTextChanged");
 
             itemView.setFocusable(false);
+            setPinCode((String) pinTV.getText());
             if ((getAdapterPosition() + 1) < getItemCount()) {
                 recyclerView.findViewHolderForAdapterPosition(getAdapterPosition() + 1).itemView.requestFocus();
             } else if (getItemCount() == getItemCount()) {
@@ -105,6 +107,14 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
         }
 
 
+    }
+
+    private void setPinCode(String data) {
+        pinCode += data;
+    }
+
+    public static String getPinCode() {
+        return pinCode;
     }
 
 
