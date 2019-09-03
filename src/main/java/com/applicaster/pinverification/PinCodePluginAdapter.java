@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 
 
-
+import com.applicaster.pinverification.ui.activities.PVMainActivity;
 import com.applicaster.plugin_manager.Plugin;
 import com.applicaster.plugin_manager.screen.PluginScreen;
 import com.applicaster.pluginpresenter.PluginPresenter;
@@ -40,5 +40,7 @@ public class PinCodePluginAdapter implements PluginScreen, PluginPresenter {
     @Override
     public void presentPlugin(Activity activity, Object o) {
         Log.d("IgorTest", "presentPlugin()");
+
+        PVMainActivity.startActivity(activity);
     }
 }

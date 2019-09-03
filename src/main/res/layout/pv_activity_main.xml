@@ -61,16 +61,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
-    <TextView
+    <com.applicaster.util.ui.CustomTextView
         android:id="@+id/pin_code_main_continue_BTN"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_login_fild"
         android:gravity="center"
         android:text="PROCEED"
+        android:enabled="false"
+        android:clickable="false"
+        android:background="@drawable/custom_login_field"
+        android:paddingTop="3.5dp"
+        android:paddingBottom="3.5dp"
         android:textColor="@color/colorBlue"
-        android:paddingVertical="7dp"
-        android:textSize="17dp"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="@+id/guideline4"
@@ -96,13 +99,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/resend_access_code"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_wraper" />
+        app:layout_constraintTop_toBottomOf="@+id/pin_code_main_continue_BTN"
+        app:layout_constraintVertical_bias="0.01999998" />
 </android.support.constraint.ConstraintLayout>

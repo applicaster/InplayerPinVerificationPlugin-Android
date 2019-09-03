@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.applicaster.pinverification.R;
+import com.applicaster.pinverification.interfaces.OnPincodeReady;
 import com.applicaster.util.OSUtil;
 
 
@@ -21,17 +22,20 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
     private int numberOfCells;
     private Context context;
     private RecyclerView recyclerView;
+    private static String pinCode = "";
+    private OnPincodeReady pinCodeListener;
 
-    public PVPinCodeAdapter(int numberOfCells, Context context, RecyclerView view) {
+    public PVPinCodeAdapter(int numberOfCells, Context context, RecyclerView view, OnPincodeReady listener) {
 
-        if(numberOfCells == 0){
+        if (numberOfCells == 0) {
             this.numberOfCells = 4; //Default value
-        }else {
+        } else {
             this.numberOfCells = numberOfCells;
         }
 
         this.context = context;
         this.recyclerView = view;
+        this.pinCodeListener = listener;
 
     }
 
@@ -88,7 +92,12 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
             itemView.setFocusable(false);
             if ((getAdapterPosition() + 1) < getItemCount()) {
                 recyclerView.findViewHolderForAdapterPosition(getAdapterPosition() + 1).itemView.requestFocus();
+                Log.d("IgorTest", "afterTextChanged false");
             } else if (getItemCount() == getItemCount()) {
+                if (pinCodeListener != null) {
+                    pinCodeListener.pinCodeReady(true);
+                }
+                Log.d("IgorTest", "afterTextChanged true");
                 hideKeyBoard();
                 pinTV.setFocusable(false);
             }
@@ -105,6 +114,14 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
         }
 
 
+    }
+
+    private void setPinCode(String data) {
+        pinCode += data;
+    }
+
+    public static String getPinCode() {
+        return pinCode;
     }
 
 
