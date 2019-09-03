@@ -56,7 +56,7 @@ public class PCNetworkRepo {
                         break;
 
                     case HttpURLConnection.HTTP_UNAUTHORIZED:
-                        listener.onError(response.message());
+                        listener.onError(getErrorMessage(response));
                         break;
 
                     case HttpURLConnection.HTTP_FORBIDDEN:
@@ -97,7 +97,7 @@ public class PCNetworkRepo {
                         break;
 
                     case HttpURLConnection.HTTP_UNAUTHORIZED:
-                        listener.onError(response.message());
+                        listener.onError(getErrorMessage(response));
                         break;
 
                     case HttpURLConnection.HTTP_FORBIDDEN:
