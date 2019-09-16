@@ -1,20 +1,16 @@
 package com.applicaster.pinverification.ui.activities;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.applicaster.pinverification.R;
 import com.applicaster.pinverification.interfaces.OnPincodeReady;
 import com.applicaster.pinverification.interfaces.PCNetworkResponse;
 import com.applicaster.pinverification.networking.PCNetworkRepo;
@@ -91,7 +87,7 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
 
     private void sendPinCode(String pinCode) {
         String token = LoginManager.getLoginPlugin().getToken();
-        PCNetworkRepo.getInstance().setPinCode("YWD2C", token, new PCNetworkResponse() {
+        PCNetworkRepo.getInstance().setPinCode(pinCode, token, new PCNetworkResponse() {
             @Override
             public void onSuccess(Object data) {
                 sendOkResoult();
@@ -101,6 +97,7 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onError(Object data) {
                 Toast.makeText(PVMainActivity.this, (String) data, Toast.LENGTH_SHORT).show();
+                deletePinCode();
                 DialogHelper.getInstance().dismiss();
             }
 
@@ -124,6 +121,7 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onError(Object data) {
                 DialogHelper.getInstance().dismiss();
+
                 Toast.makeText(PVMainActivity.this, (String) data, Toast.LENGTH_SHORT).show();
             }
 
@@ -158,6 +156,12 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
             pin_code_main_continue_BTN.setClickable(false);
         }
 
+    }
+
+    private void deletePinCode() {
+        pin_code_main_recyclerView.setAdapter(null);
+        pin_code_main_recyclerView.setLayoutManager(null);
+        recyclerViewInit();
     }
 
 }
