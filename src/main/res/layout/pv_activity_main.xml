@@ -2,44 +2,72 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pv_cardinal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
     tools:context=".ui.activities.PVMainActivity">
 
-    <TextView
-        android:id="@+id/pin_code_main_title"
+    <ImageView
+        android:id="@+id/pv_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pv_btn_close"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pin_code_main_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="ENTER PIN*"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_2"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_v_2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_1"
+        app:layout_constraintVertical_bias="0.462"
+        tools:text="Please enter the access code you received by email" />
 
     <RelativeLayout
-
-        android:id="@+id/recycler_wraper"
+        android:id="@+id/recycler_wrapper"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/pin_code_main_title"
-        app:layout_constraintBottom_toTopOf="@+id/pin_code_main_continue_BTN">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_2">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/pin_code_main_recyclerView"
@@ -47,68 +75,104 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/single_pincode_item" />
+
     </RelativeLayout>
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6"/>
-
-    <com.applicaster.util.ui.CustomTextView
-        android:id="@+id/pin_code_main_continue_BTN"
+    <TextView
+        android:id="@+id/pv_incorrect_code"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="PROCEED"
-        android:enabled="false"
-        android:clickable="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#EAA843"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_3"
+        tools:text="The code you entered is wrong! \n Please try again"
+        tools:textColor="#EAA843" />
+
+    <Button
+        android:id="@+id/pin_code_main_continue_BTN"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:background="@drawable/custom_login_field"
         android:paddingTop="3.5dp"
         android:paddingBottom="3.5dp"
-        android:textColor="@color/colorBlue"
-        android:textSize="17sp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_v_2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_1"
+        app:layout_constraintTop_toBottomOf="@+id/pin_code_main_resent_code_TV"
+        tools:text="CONTINUE" />
 
     <TextView
         android:id="@+id/pin_code_main_resent_code_TV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/resend_access_code"
-        android:textColor="#000000"
-        android:textSize="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/pin_code_main_continue_BTN"
-        app:layout_constraintVertical_bias="0.01999998" />
+        app:layout_constraintBottom_toTopOf="@+id/pin_code_main_continue_BTN"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_1"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_h_4"
+        tools:text="Resend passcode" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_v_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_v_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
 </android.support.constraint.ConstraintLayout>

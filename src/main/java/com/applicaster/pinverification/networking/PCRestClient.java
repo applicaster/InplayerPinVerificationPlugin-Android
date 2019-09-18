@@ -22,5 +22,4 @@ public class PCRestClient {
 
     public static PCNetworkApi pcClient = retrofit.create(PCNetworkApi.class);
 
-
 }
