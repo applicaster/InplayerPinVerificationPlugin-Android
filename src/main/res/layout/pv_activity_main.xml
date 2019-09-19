@@ -90,6 +90,7 @@
         android:gravity="center_horizontal"
         android:textColor="#EAA843"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/guideline_v_2"
         app:layout_constraintStart_toStartOf="@+id/guideline_v_1"
         app:layout_constraintTop_toTopOf="@+id/guideline_h_3"

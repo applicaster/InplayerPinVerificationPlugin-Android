@@ -67,6 +67,7 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull PVPinCodeAdapter.ViewHolder viewHolder, int i) {
+        viewHolder.bind(i);
     }
 
     @Override
@@ -94,6 +95,13 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
                     5f);
             tvPin.setTypeface(tvPin.getTypeface(), Typeface.BOLD);
 
+
+        }
+
+        private void bind(int position) {
+            if (position > 0) {
+                tvPin.setFocusable(false);
+            }
         }
 
         @Override
@@ -117,6 +125,7 @@ public class PVPinCodeAdapter extends RecyclerView.Adapter<PVPinCodeAdapter.View
 
         private void pinHasBeenEntered() {
             if ((getAdapterPosition() + 1) < getItemCount()) {
+                recyclerView.findViewHolderForAdapterPosition(getAdapterPosition() + 1).itemView.findViewById(R.id.single_pin_EDT).setFocusableInTouchMode(true);
                 recyclerView.findViewHolderForAdapterPosition(getAdapterPosition() + 1).itemView.findViewById(R.id.single_pin_EDT).requestFocus();
 
                 codes[getAdapterPosition()] = tvPin.getText().toString();

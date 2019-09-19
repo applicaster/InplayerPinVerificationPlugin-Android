@@ -137,11 +137,12 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
 
         if (v.getId() == OSUtil.getResourceId("pin_code_main_resent_code_TV")) {    // Resend passcode
-
+            tvIncorrectPinCode.setVisibility(View.INVISIBLE);
             DialogHelper.getInstance().displayLoaderProgressDialog(this).showLoader();
             getNewPinCode();
 
         } else if (v.getId() == OSUtil.getResourceId("pin_code_main_continue_BTN")) {   // Proceed button
+            tvIncorrectPinCode.setVisibility(View.INVISIBLE);
             if (adapter.isPinCodeReady()) {
                 DialogHelper.getInstance().displayLoaderProgressDialog(this).showLoader();
                 sendPinCode(adapter.getPinCode());
@@ -162,12 +163,14 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onError(Object data) {
-                DialogHelper.getInstance().displayNotificationDialog(PVMainActivity.this, (String) data, configurations).showNotice();
+                DialogHelper.getInstance().dismissLoader();
+                tvIncorrectPinCode.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFailure(Object data) {
-                DialogHelper.getInstance().displayNotificationDialog(PVMainActivity.this, (String) data, configurations).showNotice();
+                DialogHelper.getInstance().dismissLoader();
+                tvIncorrectPinCode.setVisibility(View.VISIBLE);
             }
         });
     }
