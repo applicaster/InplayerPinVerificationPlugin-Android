@@ -9,58 +9,58 @@ public class Configurations {
     private Map<String, String> configMap;
 
     // Pin code
-    private static final String PIN_CODE_LENGTH_KEY = "pin_code_length";
-    private static final String PIN_CODE_FONT_KEY = "pin_code_font";
-    private static final String PIN_CODE_SIZE_KEY = "pin_code_size";
-    private static final String PIN_CODE_COLOR_KEY = "pin_code_color";
-    private static final String PIN_CODE_BG_COLOR_KEY = "pin_code_bg_color";
+    private static final String PIN_CODE_LENGTH_KEY = "pin_verification_pin_code_length";
+    private static final String PIN_CODE_FONT_KEY = "pin_verification_pin_code_font";
+    private static final String PIN_CODE_SIZE_KEY = "pin_verification_pin_code_size";
+    private static final String PIN_CODE_COLOR_KEY = "pin_verification_pin_code_color";
+    private static final String PIN_CODE_BG_COLOR_KEY = "pin_verification_pin_code_bg_color";
 
     // General
-    private static final String LOGO_IMAGE_KEY = "logo_image";
-    private static final String CLOSE_BUTTON_IMAGE_KEY = "close_button_image";
+    private static final String LOGO_IMAGE_KEY = "pin_verification_logo_image";
+    private static final String CLOSE_BUTTON_IMAGE_KEY = "pin_verification_close_button_image";
 
     // Screen
-    private static final String SCREEN_BG_COLOR_KEY = "screen_bg_color";
-    private static final String SCREEN_BG_IMAGE_KEY = "screen_bg_image";
+    private static final String SCREEN_BG_COLOR_KEY = "pin_verification_screen_bg_color";
+    private static final String SCREEN_BG_IMAGE_KEY = "pin_verification_screen_bg_image";
 
     // 'Title' view
-    private static final String TITLE_TEXT_KEY = "title_text";
-    private static final String TITLE_FONT_KEY = "title_font";
-    private static final String TITLE_SIZE_KEY = "title_size";
-    private static final String TITLE_COLOR_KEY = "title_color";
+    private static final String TITLE_TEXT_KEY = "pin_verification_title_text";
+    private static final String TITLE_FONT_KEY = "pin_verification_title_font";
+    private static final String TITLE_SIZE_KEY = "pin_verification_title_size";
+    private static final String TITLE_COLOR_KEY = "pin_verification_title_color";
 
     // 'Incorrect pin'
-    private static final String INCORRECT_PIN_TEXT_KEY = "incorrect_pin_text";
-    private static final String INCORRECT_PIN_FONT_KEY = "incorrect_pin_font";
-    private static final String INCORRECT_PIN_SIZE_KEY = "incorrect_pin_size";
-    private static final String INCORRECT_PIN_COLOR_KEY = "incorrect_pin_color";
+    private static final String INCORRECT_PIN_TEXT_KEY = "pin_verification_incorrect_pin_text";
+    private static final String INCORRECT_PIN_FONT_KEY = "pin_verification_incorrect_pin_font";
+    private static final String INCORRECT_PIN_SIZE_KEY = "pin_verification_incorrect_pin_size";
+    private static final String INCORRECT_PIN_COLOR_KEY = "pin_verification_incorrect_pin_color";
 
     // 'Resend passcode'
-    private static final String RESEND_PIN_TEXT_KEY = "resend_pin_text";
-    private static final String RESEND_PIN_FONT_KEY = "resend_pin_font";
-    private static final String RESEND_PIN_SIZE_KEY = "resend_pin_size";
-    private static final String RESEND_PIN_COLOR_KEY = "resend_pin_color";
+    private static final String RESEND_PIN_TEXT_KEY = "pin_verification_resend_pin_text";
+    private static final String RESEND_PIN_FONT_KEY = "pin_verification_resend_pin_font";
+    private static final String RESEND_PIN_SIZE_KEY = "pin_verification_resend_pin_size";
+    private static final String RESEND_PIN_COLOR_KEY = "pin_verification_resend_pin_color";
 
     // 'Proceed' button
-    private static final String PROCEED_BUTTON_TEXT_KEY = "proceed_button_text";
-    private static final String PROCEED_BUTTON_FONT_KEY = "proceed_button_font";
-    private static final String PROCEED_BUTTON_SIZE_KEY = "proceed_button_size";
-    private static final String PROCEED_BUTTON_COLOR_KEY = "proceed_button_color";
-    private static final String PROCEED_BUTTON_BG_COLOR_KEY = "proceed_button_bg_color";
-    private static final String PROCEED_BUTTON_CORNERS_RADIUS_KEY = "proceed_button_corners_radius";
+    private static final String PROCEED_BUTTON_TEXT_KEY = "pin_verification_proceed_button_text";
+    private static final String PROCEED_BUTTON_FONT_KEY = "pin_verification_proceed_button_font";
+    private static final String PROCEED_BUTTON_SIZE_KEY = "pin_verification_proceed_button_size";
+    private static final String PROCEED_BUTTON_COLOR_KEY = "pin_verification_proceed_button_color";
+    private static final String PROCEED_BUTTON_BG_COLOR_KEY = "pin_verification_proceed_button_bg_color";
+    private static final String PROCEED_BUTTON_CORNERS_RADIUS_KEY = "pin_verification_proceed_button_corners_radius";
 
     // Notice dialog
-    private static final String DIALOG_BG_COLOR_KEY = "dialog_bg_color";
-    private static final String DIALOG_MESSAGE_FONT_KEY = "dialog_message_font";
-    private static final String DIALOG_MESSAGE_SIZE_KEY = "dialog_message_size";
-    private static final String DIALOG_MESSAGE_COLOR_KEY = "dialog_message_color";
+    private static final String DIALOG_BG_COLOR_KEY = "pin_verification_dialog_bg_color";
+    private static final String DIALOG_MESSAGE_FONT_KEY = "pin_verification_dialog_message_font";
+    private static final String DIALOG_MESSAGE_SIZE_KEY = "pin_verification_dialog_message_size";
+    private static final String DIALOG_MESSAGE_COLOR_KEY = "pin_verification_dialog_message_color";
 
-    private static final String DIALOG_CONFIRM_BUTTON_TEXT_KEY = "dialog_confirm_button_text";
-    private static final String DIALOG_CONFIRM_BUTTON_FONT_KEY = "dialog_confirm_button_font";
-    private static final String DIALOG_CONFIRM_BUTTON_SIZE_KEY = "dialog_confirm_button_size";
-    private static final String DIALOG_CONFIRM_BUTTON_COLOR_KEY = "dialog_confirm_button_color";
-    private static final String DIALOG_CONFIRM_BUTTON_BG_COLOR_KEY = "dialog_confirm_button_bg_color";
-    private static final String DIALOG_CONFIRM_BUTTON_CORNERS_RADIUS_KEY = "dialog_confirm_button_corners_radius";
+    private static final String DIALOG_CONFIRM_BUTTON_TEXT_KEY = "pin_verification_dialog_confirm_button_text";
+    private static final String DIALOG_CONFIRM_BUTTON_FONT_KEY = "pin_verification_dialog_confirm_button_font";
+    private static final String DIALOG_CONFIRM_BUTTON_SIZE_KEY = "pin_verification_dialog_confirm_button_size";
+    private static final String DIALOG_CONFIRM_BUTTON_COLOR_KEY = "pin_verification_dialog_confirm_button_color";
+    private static final String DIALOG_CONFIRM_BUTTON_BG_COLOR_KEY = "pin_verification_dialog_confirm_button_bg_color";
+    private static final String DIALOG_CONFIRM_BUTTON_CORNERS_RADIUS_KEY = "pin_verification_dialog_confirm_button_corners_radius";
 
     //////////////////////////////// PVMainActivity ////////////////////////////////
 
