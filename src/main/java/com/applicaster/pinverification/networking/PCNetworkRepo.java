@@ -3,13 +3,10 @@ package com.applicaster.pinverification.networking;
 import com.applicaster.pinverification.interfaces.PCNetworkResponse;
 import com.applicaster.pinverification.models.networkresponse.ValidatePincodeResponse;
 
-
-
 import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.util.HashMap;
-
 import java.util.Map;
 
 import retrofit2.Call;
@@ -22,24 +19,17 @@ public class PCNetworkRepo {
 
 
     public static PCNetworkRepo getInstance() {
-
         if (instance == null) {
             instance = new PCNetworkRepo();
-
         }
 
         return instance;
-
-
     }
-
 
     public void setPinCode(String pinCode, String authorizationToken, final PCNetworkResponse listener) {
 
-
         Map<String, String> tMap = new HashMap<>();
         tMap.put("pin_code", pinCode);
-
 
         Map<String, String> headersMap = new HashMap<>();
         headersMap.put("Authorization", "Bearer " + authorizationToken);
@@ -67,8 +57,6 @@ public class PCNetworkRepo {
                     default:
                         listener.onError(getErrorMessage(response));
                 }
-
-
             }
 
             @Override
@@ -76,17 +64,15 @@ public class PCNetworkRepo {
                 listener.onFailure(t.getMessage());
             }
         });
-
-
     }
 
 
-    public void getNewPinCode(String brandingID, String authorizationToken, final PCNetworkResponse listener) {
+    public void getNewPinCode(String authorizationToken, final PCNetworkResponse listener) {
 
         Map<String, String> headersMap = new HashMap<>();
         headersMap.put("Authorization", "Bearer " + authorizationToken);
 
-        Call<ValidatePincodeResponse> call = PCRestClient.pcClient.pcSendCode(brandingID, headersMap);
+        Call<ValidatePincodeResponse> call = PCRestClient.pcClient.pcSendCode(headersMap);
 
         call.enqueue(new Callback<ValidatePincodeResponse>() {
             @Override
@@ -108,16 +94,13 @@ public class PCNetworkRepo {
                     default:
                         listener.onError(getErrorMessage(response));
                 }
-
             }
 
             @Override
             public void onFailure(Call<ValidatePincodeResponse> call, Throwable t) {
                 listener.onFailure(t.getMessage());
-
             }
         });
-
     }
 
     private String getErrorMessage(Response<ValidatePincodeResponse> response) {

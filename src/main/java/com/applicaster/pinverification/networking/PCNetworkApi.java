@@ -18,8 +18,7 @@ public interface PCNetworkApi {
                                                     @HeaderMap Map<String, String> headers);
 
 
-    @FormUrlEncoded
     @POST("/v2/accounts/pin-codes/send")
-    Call<ValidatePincodeResponse> pcSendCode(@Field("branding_id") String branding_id,
-                                             @HeaderMap Map<String, String> headers);
+    Call<ValidatePincodeResponse> pcSendCode(
+            @HeaderMap Map<String, String> headers);
 }
