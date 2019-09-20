@@ -198,8 +198,8 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void deletePinCode() {
-        pin_code_main_recyclerView.setAdapter(null);
-        pin_code_main_recyclerView.setLayoutManager(null);
+        rvPinCode.setAdapter(null);
+        rvPinCode.setLayoutManager(null);
         recyclerViewInit();
     }
 
