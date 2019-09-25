@@ -1,7 +1,6 @@
 package com.applicaster.pinverification.networking;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.applicaster.pinverification.interfaces.PCNetworkResponse;
 import com.applicaster.pinverification.models.networkresponse.ValidatePincodeResponse;

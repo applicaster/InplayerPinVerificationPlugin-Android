@@ -15,7 +15,6 @@ import com.applicaster.pinverification.R;
 
 
 public class DialogHelper {
-    private final String TAG = DialogHelper.class.getSimpleName();
 
     private AlertDialog loaderAlertDialog;
     private AlertDialog noticeAlertDialog;
