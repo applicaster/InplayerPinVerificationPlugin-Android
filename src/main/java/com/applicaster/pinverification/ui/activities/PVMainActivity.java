@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -154,7 +155,8 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
 
     private void sendPinCode(String pinCode) {
         String token = LoginManager.getLoginPlugin().getToken();
-        PCNetworkRepo.getInstance().setPinCode(pinCode, token, new PCNetworkResponse() {
+
+        PCNetworkRepo.getInstance().setPinCode(pinCode, configurations.getPublisherId(), token, new PCNetworkResponse() {
             @Override
             public void onSuccess(Object data) {
                 DialogHelper.getInstance().dismissLoader();
@@ -172,17 +174,19 @@ public class PVMainActivity extends AppCompatActivity implements View.OnClickLis
             public void onFailure(Object data) {
                 DialogHelper.getInstance().dismissLoader();
                 tvIncorrectPinCode.setVisibility(View.VISIBLE);
+
+                Toast.makeText(PVMainActivity.this, (String) data, Toast.LENGTH_LONG).show();
             }
         });
     }
 
     private void getNewPinCode() {
         String token = LoginManager.getLoginPlugin().getToken();
-        PCNetworkRepo.getInstance().getNewPinCode(token, new PCNetworkResponse() {
+
+        PCNetworkRepo.getInstance().getNewPinCode(token, configurations.getPublisherId(), new PCNetworkResponse() {
             @Override
             public void onSuccess(Object data) {
-                DialogHelper.getInstance().dismissLoader();
-                Toast.makeText(PVMainActivity.this, (String) data, Toast.LENGTH_LONG).show();
+                DialogHelper.getInstance().displayNotificationDialog(PVMainActivity.this, (String) data, configurations).showNotice();
             }
 
             @Override

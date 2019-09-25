@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PCRestClient {
 
     private static final short TIME_OUT = 15000;
-    public static final String BASE_URL = "https://services.inplayer.com/";
+    public static final String BASE_URL = "https://enigmatic-headland-82942.herokuapp.com/";
 
     private static OkHttpClient okHttpClient = new OkHttpClient.Builder().connectTimeout(TIME_OUT, TimeUnit.MILLISECONDS).build();
 

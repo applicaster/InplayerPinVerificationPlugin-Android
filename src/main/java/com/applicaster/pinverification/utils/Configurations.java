@@ -8,6 +8,8 @@ public class Configurations {
 
     private Map<String, String> configMap;
 
+    private static final String PUBLISHER_ID_KEY = "pin_verification_publisher_id";
+
     // Pin code
     private static final String PIN_CODE_LENGTH_KEY = "pin_verification_pin_code_length";
     private static final String PIN_CODE_FONT_KEY = "pin_verification_pin_code_font";
@@ -66,6 +68,10 @@ public class Configurations {
 
     public Configurations(Map<String, String> configMap) {
         this.configMap = configMap;
+    }
+
+    public String getPublisherId() {
+        return configMap.get(PUBLISHER_ID_KEY);
     }
 
     public int getPinCodeLength() {
